@@ -1,5 +1,18 @@
 <!doctype html>
-<html lang="nl"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>OpenVPN-configuratiechecker · VPNNu</title>
-<style>body{font:16px/1.6 system-ui,sans-serif;max-width:740px;margin:50px auto;padding:0 20px;color:#192d45}h1{line-height:1.2}input{display:block;margin:12px 0;padding:12px;border:1px solid #dbe2ec;border-radius:8px;max-width:100%}input:focus-visible,a:focus-visible{outline:3px solid orange}.panel{padding:20px;border:1px solid #dbe2ec;border-radius:10px;background:#f8faff}.result{overflow-wrap:anywhere}</style>
-<main data-tool="openvpn-config-checker" data-lang="nl"><h1>OpenVPN-configuratiechecker</h1><p>Controleer een .ovpn-bestand op veelvoorkomende instellingen.</p><div class="panel"><label for="file">Kies een .ovpn-bestand (max. 256 KB)</label><input id="file" type="file" accept=".ovpn,.conf,text/plain" data-ovpn-file><p>Het bestand wordt alleen in deze browser gelezen en niet geüpload.</p><div class="result" role="status" data-config-result></div></div><p>Dit is een statische controle; certificaten, serverbereikbaarheid en wachtwoorden worden niet gevalideerd.</p><p><a href="https://vpnnu.nl/tools/openvpn-config-checker/">Gebruik de checker op VPNNu.nl</a></p></main>
-<script src="tool.js" defer></script></html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Controleer een OpenVPN .ovpn-bestand op veelvoorkomende problemen. Je bestand blijft in je browser.">
+  <title>OpenVPN-configuratie controleren | VPNNu</title>
+  <style>
+    body{margin:0;background:#f8faff;color:#192d45;font:16px/1.5 system-ui,sans-serif}main{max-width:700px;margin:0 auto;padding:48px 20px}h1{font-size:clamp(32px,5vw,48px);line-height:1.15;margin:0 0 12px}p{color:#596b82}.panel{background:#fff;border:1px solid #dbe2ec;border-radius:14px;padding:22px;margin-top:24px}label{display:block;font-weight:600;margin-bottom:10px}input{max-width:100%;font:inherit}.note{font-size:13px;margin:12px 0 0}.result{overflow-wrap:anywhere;margin-top:16px}.result:empty{display:none}.result ul{padding-left:22px}details{margin-top:18px;border:1px solid #dbe2ec;border-radius:9px;background:#fff}summary{padding:12px 16px;cursor:pointer;font-weight:600}details p{padding:0 16px 12px;margin:0}a{color:#295ceb}a:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #e69418}
+  </style>
+</head>
+<body><main data-tool="openvpn-config-checker" data-lang="nl">
+  <h1>OpenVPN-configuratiechecker</h1>
+  <p>Controleer je .ovpn-bestand op veelvoorkomende problemen.</p>
+  <div class="panel"><label for="file">Kies een .ovpn-bestand (max. 256 KB)</label><input id="file" type="file" accept=".ovpn,.conf,text/plain" data-ovpn-file><p class="note">Je bestand blijft in deze browser.</p><div class="result" role="status" data-config-result></div></div>
+  <details><summary>Wat controleren we?</summary><p>Server, protocol, aanmelding, certificaten en enkele instellingen. Deze statische controle test de server of je wachtwoord niet.</p></details>
+  <p><a href="https://vpnnu.nl/tools/openvpn-config-checker/">Gebruik de checker op VPNNu.nl →</a></p>
+</main><script src="tool.js" defer></script></body></html>
